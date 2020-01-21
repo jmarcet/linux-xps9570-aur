@@ -4,7 +4,7 @@
 
 #pkgbase=linux               # Build stock -ARCH kernel
 pkgbase=linux-xps9570       # Build kernel with a different name
-_srcver=5.4.12-xps9570-1
+_srcver=5.4.13-xps9570-1
 pkgver=${_srcver//-/.}
 pkgrel=1
 arch=(x86_64)
@@ -29,7 +29,7 @@ validpgpkeys=(
   '8218F88849AAC522E94CF470A5E9288C4FA415FA'  # Jan Alexander Steffens (heftig)
 )
 sha256sums=('SKIP'
-            'abbd1d79b747d0196faaf804c06969ffc2a3346276cf40ff4bfbcfb685c1402f'
+            '81cbda3d5ea16a5f54795f661172dd55144b7f3e9466fb5f0a3f1610345547e0'
             'ae2e95db94ef7176207c690224169594d49445e04249d2499e9d2fbc117a0b21'
             'c043f3033bb781e2688794a59f6d1f7ed49ef9b13eb77ff9a425df33a244a636'
             'ad6344badc91ad0630caacde83f7f9b97276f80d26a20619a87952be65492c65')
