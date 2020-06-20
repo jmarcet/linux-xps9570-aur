@@ -6,7 +6,7 @@
 
 pkgbase=linux-xps9570
 pkgver=5.7.2.xps9570.2
-pkgrel=1
+pkgrel=2
 pkgdesc='Linux XPS9570'
 _srcver=${pkgver%.*}
 _srctag=v${_srcver%.*}-${_srcver##*.}-${pkgver##*.}
@@ -30,7 +30,7 @@ validpgpkeys=(
   '8218F88849AAC522E94CF470A5E9288C4FA415FA'  # Jan Alexander Steffens (heftig)
 )
 sha256sums=('SKIP'
-            'bdfc053ea65da11f9c13396bc1c7e233eb7687710077274573e3e7e2401f7a66')
+            'c66452cca8d5dca39a23c5a87a1e8025bce70670481dbd2af308407bb0badf7f')
 
 export KBUILD_BUILD_HOST=archlinux
 export KBUILD_BUILD_USER=$pkgbase
