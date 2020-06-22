@@ -5,7 +5,7 @@
 # Maintainer: Jan Alexander Steffens (heftig) <jan.steffens@gmail.com>
 
 pkgbase=linux-xps9570
-pkgver=5.7.4.xps9570.1
+pkgver=5.7.5.xps9570.1
 pkgrel=1
 pkgdesc='Linux XPS9570'
 _srcver=${pkgver%.*}
@@ -30,7 +30,7 @@ validpgpkeys=(
   '8218F88849AAC522E94CF470A5E9288C4FA415FA'  # Jan Alexander Steffens (heftig)
 )
 sha256sums=('SKIP'
-            'c43317fa1b8ef48f1e7901165677637507c56111d425d7c1bfa180d51d854bbe')
+            'bda684eff8cf9601cf6f0a74d393e97891bfaf36e2f9bd16e8ea68a756ec31fe')
 
 export KBUILD_BUILD_HOST=archlinux
 export KBUILD_BUILD_USER=$pkgbase
