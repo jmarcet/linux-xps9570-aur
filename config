@@ -1,6 +1,6 @@
 #
 # Automatically generated file; DO NOT EDIT.
-# Linux/x86 5.7.7-xps9570-1 Kernel Configuration
+# Linux/x86 5.7.8-xps9570-1 Kernel Configuration
 #
 
 #
@@ -424,7 +424,7 @@ CONFIG_MICROCODE_INTEL=y
 # CONFIG_MICROCODE_AMD is not set
 # CONFIG_MICROCODE_OLD_INTERFACE is not set
 CONFIG_X86_MSR=y
-CONFIG_X86_CPUID=m
+CONFIG_X86_CPUID=y
 # CONFIG_X86_5LEVEL is not set
 CONFIG_X86_DIRECT_GBPAGES=y
 # CONFIG_X86_CPA_STATISTICS is not set
@@ -481,7 +481,7 @@ CONFIG_HOTPLUG_CPU=y
 CONFIG_LEGACY_VSYSCALL_XONLY=y
 # CONFIG_LEGACY_VSYSCALL_NONE is not set
 CONFIG_CMDLINE_BOOL=y
-CONFIG_CMDLINE="cryptdevice=/dev/disk/by-partlabel/Luks:cryptroot:allow-discards root=/dev/mapper/cryptroot rootflags=subvol=@ default_hugepagesz=1G hugepagesz=1G hugepages=8 transparent_hugepage=never i915.disable_power_well=0 i915.enable_fbc=1 i915.enable_guc=-1 i915.fastboot=1 intel_pstate=passive mem_sleep_default=deep net.ifnames=0 rd.luks.options=discard scsi_mod.use_blk_mq=1 sysrq_always_enabled=1 vfio_iommu_type1.allow_unsafe_interrupts=1"
+CONFIG_CMDLINE="cryptdevice=/dev/disk/by-partlabel/Luks:cryptroot:allow-discards root=/dev/mapper/cryptroot rootflags=subvol=@ default_hugepagesz=1G hugepagesz=1G hugepages=8 transparent_hugepage=never i915.disable_power_well=0 i915.enable_fbc=1 i915.enable_guc=-1 i915.fastboot=1 mem_sleep_default=deep net.ifnames=0 rd.luks.options=discard scsi_mod.use_blk_mq=1 sysrq_always_enabled=1 vfio_iommu_type1.allow_unsafe_interrupts=1"
 # CONFIG_CMDLINE_OVERRIDE is not set
 CONFIG_MODIFY_LDT_SYSCALL=y
 CONFIG_HAVE_LIVEPATCH=y
@@ -598,7 +598,7 @@ CONFIG_CPU_FREQ_STAT=y
 # CONFIG_CPU_FREQ_DEFAULT_GOV_CONSERVATIVE is not set
 CONFIG_CPU_FREQ_DEFAULT_GOV_SCHEDUTIL=y
 CONFIG_CPU_FREQ_GOV_PERFORMANCE=y
-CONFIG_CPU_FREQ_GOV_POWERSAVE=m
+CONFIG_CPU_FREQ_GOV_POWERSAVE=y
 CONFIG_CPU_FREQ_GOV_USERSPACE=m
 CONFIG_CPU_FREQ_GOV_ONDEMAND=m
 CONFIG_CPU_FREQ_GOV_CONSERVATIVE=m
@@ -610,7 +610,8 @@ CONFIG_CPU_FREQ_GOV_SCHEDUTIL=y
 # CONFIG_CPUFREQ_DT is not set
 CONFIG_X86_INTEL_PSTATE=y
 CONFIG_X86_PCC_CPUFREQ=y
-# CONFIG_X86_ACPI_CPUFREQ is not set
+CONFIG_X86_ACPI_CPUFREQ=y
+# CONFIG_X86_POWERNOW_K8 is not set
 # CONFIG_X86_SPEEDSTEP_CENTRINO is not set
 # CONFIG_X86_P4_CLOCKMOD is not set
 
