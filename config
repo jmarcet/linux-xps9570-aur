@@ -6568,13 +6568,13 @@ CONFIG_INTEL_VBTN=m
 # CONFIG_I2C_MULTI_INSTANTIATE is not set
 # CONFIG_MLX_PLATFORM is not set
 CONFIG_INTEL_IPS=m
-# CONFIG_INTEL_RST is not set
-# CONFIG_INTEL_SMARTCONNECT is not set
+CONFIG_INTEL_RST=y
+CONFIG_INTEL_SMARTCONNECT=y
 
 #
 # Intel Speed Select Technology interface support
 #
-# CONFIG_INTEL_SPEED_SELECT_INTERFACE is not set
+CONFIG_INTEL_SPEED_SELECT_INTERFACE=y
 # end of Intel Speed Select Technology interface support
 
 CONFIG_INTEL_TURBO_MAX_3=y
