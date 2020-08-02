@@ -5,7 +5,7 @@
 # Maintainer: Jan Alexander Steffens (heftig) <jan.steffens@gmail.com>
 
 pkgbase=linux-xps9570
-pkgver=5.7.11.xps9570.1
+pkgver=5.7.11.xps9570.2
 pkgrel=1
 pkgdesc='Linux XPS9570'
 _srcver=${pkgver%.*}
