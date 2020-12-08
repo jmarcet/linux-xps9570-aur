@@ -481,7 +481,7 @@ CONFIG_HOTPLUG_CPU=y
 CONFIG_LEGACY_VSYSCALL_XONLY=y
 # CONFIG_LEGACY_VSYSCALL_NONE is not set
 CONFIG_CMDLINE_BOOL=y
-CONFIG_CMDLINE="cryptdevice=/dev/disk/by-partlabel/Luks:cryptroot:allow-discards root=/dev/mapper/cryptroot default_hugepagesz=1G hugepagesz=1G hugepages=8 transparent_hugepage=never i915.disable_power_well=0 i915.enable_fbc=1 i915.enable_guc=-1 i915.fastboot=1 mem_sleep_default=deep net.ifnames=0 sysrq_always_enabled=1 vfio_iommu_type1.allow_unsafe_interrupts=1"
+CONFIG_CMDLINE="cryptdevice=/dev/disk/by-partlabel/Luks:cryptroot:allow-discards root=/dev/mapper/cryptroot default_hugepagesz=1G hugepagesz=1G hugepages=8 transparent_hugepage=never i915.disable_power_well=1 i915.enable_dc=4 i915.enable_guc=-1 i915.enable_psr=1 i915.modeset=1 net.ifnames=0 sysrq_always_enabled=1 vfio_iommu_type1.allow_unsafe_interrupts=1"
 # CONFIG_CMDLINE_OVERRIDE is not set
 CONFIG_MODIFY_LDT_SYSCALL=y
 CONFIG_HAVE_LIVEPATCH=y
@@ -6646,7 +6646,7 @@ CONFIG_INTEL_VBTN=m
 # CONFIG_TOPSTAR_LAPTOP is not set
 # CONFIG_I2C_MULTI_INSTANTIATE is not set
 # CONFIG_MLX_PLATFORM is not set
-CONFIG_INTEL_IPS=m
+CONFIG_INTEL_IPS=y
 CONFIG_INTEL_RST=y
 CONFIG_INTEL_SMARTCONNECT=y
 
