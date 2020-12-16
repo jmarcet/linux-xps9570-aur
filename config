@@ -1,6 +1,6 @@
 #
 # Automatically generated file; DO NOT EDIT.
-# Linux/x86 5.9.11-xps9570-1 Kernel Configuration
+# Linux/x86 5.9.11-xps9570-2 Kernel Configuration
 #
 CONFIG_CC_VERSION_TEXT="gcc (GCC) 10.2.0"
 CONFIG_CC_IS_GCC=y
@@ -481,7 +481,7 @@ CONFIG_HOTPLUG_CPU=y
 CONFIG_LEGACY_VSYSCALL_XONLY=y
 # CONFIG_LEGACY_VSYSCALL_NONE is not set
 CONFIG_CMDLINE_BOOL=y
-CONFIG_CMDLINE="cryptdevice=/dev/disk/by-partlabel/Luks:cryptroot:allow-discards root=/dev/mapper/cryptroot default_hugepagesz=1G hugepagesz=1G hugepages=8 transparent_hugepage=never i915.disable_power_well=1 i915.enable_dc=4 i915.enable_guc=-1 i915.enable_psr=1 i915.modeset=1 net.ifnames=0 sysrq_always_enabled=1 vfio_iommu_type1.allow_unsafe_interrupts=1"
+CONFIG_CMDLINE="cryptdevice=/dev/disk/by-partlabel/Luks:cryptroot:allow-discards root=/dev/mapper/cryptroot default_hugepagesz=1G hugepagesz=1G hugepages=8 transparent_hugepage=never net.ifnames=0 sysrq_always_enabled=1 vfio_iommu_type1.allow_unsafe_interrupts=1"
 # CONFIG_CMDLINE_OVERRIDE is not set
 CONFIG_MODIFY_LDT_SYSCALL=y
 CONFIG_HAVE_LIVEPATCH=y
@@ -4882,7 +4882,14 @@ CONFIG_DRM_I2C_NXP_TDA9950=m
 
 # CONFIG_DRM_RADEON is not set
 # CONFIG_DRM_AMDGPU is not set
-# CONFIG_DRM_NOUVEAU is not set
+CONFIG_DRM_NOUVEAU=m
+# CONFIG_NOUVEAU_LEGACY_CTX_SUPPORT is not set
+CONFIG_NOUVEAU_DEBUG=5
+CONFIG_NOUVEAU_DEBUG_DEFAULT=3
+# CONFIG_NOUVEAU_DEBUG_MMU is not set
+# CONFIG_NOUVEAU_DEBUG_PUSH is not set
+CONFIG_DRM_NOUVEAU_BACKLIGHT=y
+# CONFIG_DRM_NOUVEAU_SVM is not set
 CONFIG_DRM_I915=m
 CONFIG_DRM_I915_FORCE_PROBE="*"
 CONFIG_DRM_I915_CAPTURE_ERROR=y
@@ -6601,7 +6608,7 @@ CONFIG_DCDBAS=y
 CONFIG_DELL_SMBIOS=y
 CONFIG_DELL_SMBIOS_WMI=y
 CONFIG_DELL_SMBIOS_SMM=y
-# CONFIG_DELL_LAPTOP is not set
+CONFIG_DELL_LAPTOP=y
 CONFIG_DELL_RBTN=m
 CONFIG_DELL_RBU=m
 CONFIG_DELL_SMO8800=y
