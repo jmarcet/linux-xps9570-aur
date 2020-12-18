@@ -481,7 +481,7 @@ CONFIG_HOTPLUG_CPU=y
 CONFIG_LEGACY_VSYSCALL_XONLY=y
 # CONFIG_LEGACY_VSYSCALL_NONE is not set
 CONFIG_CMDLINE_BOOL=y
-CONFIG_CMDLINE="cryptdevice=/dev/disk/by-partlabel/Luks:cryptroot:allow-discards root=/dev/mapper/cryptroot default_hugepagesz=1G hugepagesz=1G hugepages=8 transparent_hugepage=never mem_sleep_default=s2idle net.ifnames=0 sysrq_always_enabled=1 vfio_iommu_type1.allow_unsafe_interrupts=1"
+CONFIG_CMDLINE="cryptdevice=/dev/disk/by-partlabel/Luks:cryptroot:allow-discards root=/dev/mapper/cryptroot cgroup_no_v1=net_cls,net_prio default_hugepagesz=1G hugepagesz=1G hugepages=8 transparent_hugepage=never mem_sleep_default=s2idle net.ifnames=0 sysrq_always_enabled=1 vfio_iommu_type1.allow_unsafe_interrupts=1"
 # CONFIG_CMDLINE_OVERRIDE is not set
 CONFIG_MODIFY_LDT_SYSCALL=y
 CONFIG_HAVE_LIVEPATCH=y
@@ -1978,7 +1978,8 @@ CONFIG_PREVENT_FIRMWARE_BUILD=y
 #
 CONFIG_FW_LOADER=y
 CONFIG_FW_LOADER_PAGED_BUF=y
-CONFIG_EXTRA_FIRMWARE=""
+CONFIG_EXTRA_FIRMWARE="i915/kbl_dmc_ver1_04.bin i915/kbl_guc_33.0.0.bin i915/kbl_huc_4.0.0.bin"
+CONFIG_EXTRA_FIRMWARE_DIR="/lib/firmware"
 CONFIG_FW_LOADER_USER_HELPER=y
 # CONFIG_FW_LOADER_USER_HELPER_FALLBACK is not set
 CONFIG_FW_LOADER_COMPRESS=y
@@ -4845,7 +4846,7 @@ CONFIG_AGP_INTEL=y
 # CONFIG_AGP_VIA is not set
 CONFIG_INTEL_GTT=y
 CONFIG_VGA_ARB=y
-CONFIG_VGA_ARB_MAX_GPUS=10
+CONFIG_VGA_ARB_MAX_GPUS=2
 CONFIG_VGA_SWITCHEROO=y
 CONFIG_DRM=y
 CONFIG_DRM_MIPI_DSI=y
@@ -5052,7 +5053,6 @@ CONFIG_FB_CMDLINE=y
 CONFIG_FB_NOTIFY=y
 CONFIG_FB=y
 CONFIG_FIRMWARE_EDID=y
-CONFIG_FB_BOOT_VESA_SUPPORT=y
 CONFIG_FB_CFB_FILLRECT=y
 CONFIG_FB_CFB_COPYAREA=y
 CONFIG_FB_CFB_IMAGEBLIT=y
@@ -5076,8 +5076,8 @@ CONFIG_FB_TILEBLITTING=y
 # CONFIG_FB_IMSTT is not set
 # CONFIG_FB_VGA16 is not set
 # CONFIG_FB_UVESA is not set
-CONFIG_FB_VESA=y
-CONFIG_FB_EFI=y
+# CONFIG_FB_VESA is not set
+# CONFIG_FB_EFI is not set
 # CONFIG_FB_N411 is not set
 # CONFIG_FB_HGA is not set
 # CONFIG_FB_OPENCORES is not set
@@ -5110,7 +5110,7 @@ CONFIG_FB_EFI=y
 # CONFIG_FB_VIRTUAL is not set
 # CONFIG_FB_METRONOME is not set
 # CONFIG_FB_MB862XX is not set
-CONFIG_FB_SIMPLE=y
+# CONFIG_FB_SIMPLE is not set
 # CONFIG_FB_SSD1307 is not set
 # CONFIG_FB_SM712 is not set
 # end of Frame buffer Devices
@@ -5153,7 +5153,7 @@ CONFIG_HDMI=y
 #
 # Console display driver support
 #
-CONFIG_VGA_CONSOLE=y
+# CONFIG_VGA_CONSOLE is not set
 CONFIG_DUMMY_CONSOLE=y
 CONFIG_DUMMY_CONSOLE_COLUMNS=80
 CONFIG_DUMMY_CONSOLE_ROWS=25
