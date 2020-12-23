@@ -30,13 +30,21 @@ validpgpkeys=(
   '8218F88849AAC522E94CF470A5E9288C4FA415FA'  # Jan Alexander Steffens (heftig)
 )
 sha256sums=('SKIP'
-            'd8fe79ee20ed9314a2a980c9f19cf72c41a369993e2e55fa489c4fc976d0c7b2')
+            '13e4e53f3891753db526db9153172941a2ed82ad9b608aad4f62ef5bdde58e73')
 
 export KBUILD_BUILD_HOST=archlinux
 export KBUILD_BUILD_USER=$pkgbase
 export KBUILD_BUILD_TIMESTAMP="$(date -Ru${SOURCE_DATE_EPOCH:+d @$SOURCE_DATE_EPOCH})"
 
 prepare() {
+  echo "Rebuilding local signing key..."
+  cd ../certs-local
+  ./genkeys.sh
+
+  echo "Updating kernel config with new key..."
+  ./fix_config.sh ../config
+  cd ../src
+
   cd $_srcname
 
   echo "Setting version..."
@@ -169,6 +177,27 @@ _package-headers() {
 
   echo "Fixing permissions..."
   chmod -Rc u=rwX,go=rX "$pkgdir"
+
+  #
+  # Out-of-tree module signing
+  # This is run in the kernel source / build directory
+  #
+  echo "Local Signing certs for out-of-tree modules..."
+
+  certs_local_src="../../certs-local"
+  key_dir=$(<${certs_local_src}/current_key_dir)
+
+  certs_local_dst="${builddir}/certs-local"
+  signer="sign_manual.sh"
+  mkdir -p ${certs_local_dst}
+  rsync -a $certs_local_src/{current,$key_dir,$signer} $certs_local_dst/
+
+  # DKMS tools
+  dkms_src="$certs_local_src/dkms"
+  dkms_dst="${pkgdir}/etc/dkms"
+  mkdir -p $dkms_dst
+
+  rsync -a $dkms_src/{kernel-sign.conf,kernel-sign.sh} $dkms_dst/
 }
 
 _package-docs() {
