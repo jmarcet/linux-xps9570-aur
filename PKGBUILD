@@ -40,12 +40,7 @@ prepare() {
   echo "Rebuilding local signing key..."
   cd ../certs-local
   ./genkeys.sh
-
-  echo "Updating kernel config with new key..."
-  ./fix_config.sh ../config
-  cd ../src
-
-  cd $_srcname
+  cd ../src/$_srcname
 
   echo "Setting version..."
   scripts/setlocalversion --save-scmversion
@@ -62,6 +57,10 @@ prepare() {
 
   echo "Setting config..."
   cp ../config .config
+  echo "Updating kernel config with new key..."
+  cd ../../certs-local
+  ./fix_config.sh ../src/$_srcname/.config
+  cd ../src/$_srcname
   make olddefconfig
 
   make -s kernelrelease > version
