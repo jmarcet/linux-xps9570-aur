@@ -1,6 +1,6 @@
 #
 # Automatically generated file; DO NOT EDIT.
-# Linux/x86 5.11.21-xps9570-1 Kernel Configuration
+# Linux/x86 5.11.22-xps9570-1 Kernel Configuration
 #
 CONFIG_CC_VERSION_TEXT="gcc (GCC) 11.1.0"
 CONFIG_CC_IS_GCC=y
@@ -496,8 +496,7 @@ CONFIG_HOTPLUG_CPU=y
 CONFIG_LEGACY_VSYSCALL_XONLY=y
 # CONFIG_LEGACY_VSYSCALL_NONE is not set
 CONFIG_CMDLINE_BOOL=y
-CONFIG_CMDLINE="cryptdevice=/dev/disk/by-partlabel/Luks:cryptroot:allow-discards root=/dev/mapper/cryptroot default_hugepagesz=1G hugepagesz=1G hugepages=8 transparent_hugepage=never mem_sleep_default=s2idle net.ifnames=0 sysrq_always_enabled=1 vfio_iommu_type1.allow_unsafe_interrupts=1"
-# CONFIG_CMDLINE_OVERRIDE is not set
+CONFIG_CMDLINE=""
 CONFIG_MODIFY_LDT_SYSCALL=y
 CONFIG_HAVE_LIVEPATCH=y
 # end of Processor type and features
